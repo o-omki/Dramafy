@@ -248,4 +248,4 @@ async def on_command_error(ctx, error):
 
 
 keep_alive()
-bot.run("ODYxOTEzMzU1NjkzMDY0MjAz.YOQtXQ.L8W4fq5jZTIXewoJE9x3a4sLqzY", bot = True, reconnect = True)
+bot.run(DISCORD_TOKEN, bot = True, reconnect = True)
