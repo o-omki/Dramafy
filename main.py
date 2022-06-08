@@ -20,7 +20,9 @@ DISCORD_TOKEN = Tokens.DISCORD_TOKEN
 TMDB_APIKEY = Tokens.TMDB_APIKEY
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix = "d.", owner_ids = (414066242476048384, ), intents = intents, allowed_mentions = discord.AllowedMentions.all() ,description = "A bot to keep you updated with latest drama releases.")
+bot = commands.Bot(command_prefix = "d.", owner_ids = (414066242476048384, ),
+   intents = intents, allowed_mentions = discord.AllowedMentions.all(),
+   description = "A bot to keep you updated with latest drama releases.")
 
 @bot.event
 async def on_ready():

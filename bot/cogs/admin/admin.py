@@ -162,9 +162,6 @@ class AdministratorCommands(commands.Cog):
         tmdb.API_KEY = TMDB_APIKEY
         search = tmdb.Search().tv(query = drama_name)
 
-#######################################################################################################################################
-#######################################################################################################################################
-
     @commands.guild_only()
     @commands.has_permissions(administrator = True)
     @commands.group(name = "config", invoke_without_command = True)
@@ -290,7 +287,7 @@ class AdministratorCommands(commands.Cog):
                     return await ctx.channel.send("Language not found! Enter the correct language.")
             
         if not self.check_channel_permissions(ctx, _channel):
-            return await ctx.channel.send(f"Failed. Ensure that I have the permissions to send messages, add rections and read message historyin {_channel.mention}.")
+            return await ctx.channel.send(f"Failed. Ensure that I have the permissions to send messages, add rections and read message history in {_channel.mention}.")
         
         else:
             client = AsyncIOMotorClient(MONGODB_URI).DRAMAS.GUILD_CONFIG
@@ -341,8 +338,6 @@ class AdministratorCommands(commands.Cog):
             
             else:
                 return await ctx.message.add_reaction(Emotes.CONFIRMATION_EMOTE)
-
-
 
 def setup(bot):
     bot.add_cog(AdministratorCommands(bot))
